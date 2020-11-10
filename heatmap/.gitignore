@@ -1,1 +1,4 @@
 /target/
+predictions.txt
+heatmap.geojson
+dependency-reduced-pom.xml
