@@ -97,8 +97,8 @@ public class App {
     
     private static void computeGridPoints() {
         /* Lengths of polygon's sides in longitude and latitude direction */
-        var longStep = (EAST_BOUND.subtract(WEST_BOUND)).divide(BigDecimal.TEN);
-        var latStep = (SOUTH_BOUND.subtract(NORTH_BOUND)).divide(BigDecimal.TEN);
+        var longStep = (EAST_BOUND.subtract(WEST_BOUND)).divide(new BigDecimal(GRID_COLS));
+        var latStep = (SOUTH_BOUND.subtract(NORTH_BOUND)).divide(new BigDecimal(GRID_ROWS));
         /* By adding multiples of above values to boundaries we get coordinates of points in grid */
         for (int row = 0; row < GRID_ROWS+1; row++) {
             var latitude = NORTH_BOUND.add(new BigDecimal(row).multiply(latStep)).doubleValue();
